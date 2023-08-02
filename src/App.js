@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Letters from './components/Letters';
+import Score from './components/Score';
+import Solution from './components/Solution';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Score score={100} />
+      <Solution
+        word={["_", "_", "_", "_"]}
+        tip="Your ideal mood when coding" />
+      <Letters />
     </div>
   );
 }
