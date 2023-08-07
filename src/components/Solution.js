@@ -1,18 +1,18 @@
+import Letter from "./Letter"
 /**
  * Component to show the guessed word 
- * @param {Object} params 
- * @param {Array<string>} params.word 
- * @param {string} params.tip 
  */
-export default function Solution({ word, tip }) {
+export default function Solution({ letterStatus, solution }) {
     return (
         <div>
-            {word.map(
+            {[...solution.word].map(
                 (letter, index) =>
-                    <span key={index}>{letter} </span>
+                    letterStatus[letter]
+                        ? <Letter key={index} letter={letter} />
+                        : <Letter key={index} letter="_ " />
             )}
             <div>
-                <em>{tip}</em>
+                <em>{solution.hint}</em>
             </div>
         </div>
     )
