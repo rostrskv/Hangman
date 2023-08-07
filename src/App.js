@@ -18,6 +18,10 @@ function App() {
     hint: "Your ideal mood when coding"
   })
   const [score, setScore] = useState(100)
+  const selectLetter = (letter) => {
+    setLetterStatus({ ...letterStatus, [letter]: true })
+    setScore(score + (solution.word.includes(letter) ? 5 : -20))
+  }
   return (
     <div >
       <Score score={score} />
@@ -25,9 +29,10 @@ function App() {
         letterStatus={letterStatus}
         solution={solution}
       />
-      <Letters letterStatus={letterStatus} />
+      <Letters letterStatus={letterStatus} selectLetter={selectLetter} />
     </div>
   );
 }
 
 export default App;
+
