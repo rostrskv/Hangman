@@ -19,6 +19,9 @@ function App() {
   })
   const [score, setScore] = useState(100)
   const selectLetter = (letter) => {
+    if (letterStatus[letter]) {
+      return
+    }
     setLetterStatus({ ...letterStatus, [letter]: true })
     setScore(score + (solution.word.includes(letter) ? 5 : -20))
   }
