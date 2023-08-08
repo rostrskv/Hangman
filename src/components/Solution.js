@@ -1,6 +1,9 @@
 import Letter from "./Letter"
 /**
  * Component to show the guessed word 
+ * @param {Object} props 
+ * @param {Object.<string, boolean>} props.letterStatus 
+ * @param {{word:string, hint:string}} props.solution 
  */
 export default function Solution({ letterStatus, solution }) {
     return (

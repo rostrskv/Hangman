@@ -1,3 +1,9 @@
+/**
+ * Component to show end result of the game
+ * @param {Object} props 
+ * @param {boolean} props.hasWon
+ * @param {string} props.word
+ */
 export default function EndGame({ hasWon, word }) {
     return (
         hasWon

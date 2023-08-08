@@ -1,6 +1,9 @@
 import Letter from "./Letter";
 /**
  * Component to show the letters to choose
+ * @param {Object} props 
+ * @param {Object.<string, boolean>} props.letterStatus 
+ * @param {string} props.selectLetter 
  */
 export default function Letters({ letterStatus, selectLetter }) {
     return (
@@ -13,7 +16,6 @@ export default function Letters({ letterStatus, selectLetter }) {
                     } />
                 ))
             }
-
         </div>
     );
 }

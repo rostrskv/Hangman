@@ -6,6 +6,10 @@ import Solution from './components/Solution';
 import EndGame from './components/EndGame';
 
 function App() {
+  /**
+   * returns alphabet letters with initial statuses (false)
+   * @returns {Object.<string, boolean>} 
+   */
   const generateLetterStatuses = () => {
     let letters = {}
     for (let char = "A"; char <= "Z"; char = String.fromCodePoint(char.codePointAt() + 1)) {
