@@ -1,5 +1,14 @@
 .selected {
-  text-decoration: line-through;
+  background: linear-gradient(-60deg, transparent 47.75%, blue 49.5%, blue 50.5%, transparent 52.25%);
+}
+
+.non-selected {
+  cursor: pointer;
+}
+
+.selected,
+.non-selected {
+  letter-spacing: .2rem;
 }
 
 .high-score {
@@ -7,7 +16,7 @@
 }
 
 .medium-score {
-  color: yellow
+  color: darkgoldenrod
 }
 
 .low-score {
